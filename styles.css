@@ -1,0 +1,138 @@
+body, html {
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o preenchimento padrão */
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    max-width: 100%; /* Restringe a largura do body a 100% da viewport */
+    margin: 0; /* Remove as margens padrão do body */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+}
+
+.navbar {
+    display: flex; /* Define um contêiner flexível */
+    justify-content: space-between; /* Distribui o espaço entre os elementos filhos, colocando-os nas extremidades */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+    background-color: #ffffff; /* Define a cor de fundo da barra de navegação */
+    padding: 10px; /* Adiciona um preenchimento interno de 10px */
+    position: relative; /* Mantém a posição relativa para outros estilos */
+}
+
+.search-section {
+    display: flex; /* Define um contêiner flexível */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+}
+
+.search-section .home-link {
+    margin-right: 20px; /* Adiciona uma margem direita de 20px */
+    text-decoration: none; /* Remove a sublinhado dos links */
+    color: #373f3f; /* Define a cor do texto do link */
+}
+
+.logo-section {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+    flex: 1; /* Permite que a seção ocupe o espaço disponível */
+}
+
+.logo-section img {
+    display: flex;
+    align-items:flex-end;
+    height: 80px; /* Define a altura do logo */
+    max-width: 100%; /* Garante que o logo seja responsivo e não ultrapasse a largura do contêiner */
+    width: auto; /* Mantém a proporção do logo */
+}
+
+.user-section {
+    display: flex; /* Define um contêiner flexível */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+}
+
+.user-section button {
+    background-color: #373f3f; /* Define a cor de fundo do botão */
+    color: white; /* Define a cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    padding: 10px 20px; /* Define o preenchimento interno do botão */
+    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o botão */
+}
+
+.user-section .icon-cart {
+    font-size: 24px; /* Define o tamanho da fonte do ícone do carrinho */
+    margin-left: 20px; /* Adiciona uma margem esquerda de 20px */
+    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o ícone */
+}
+
+.product-container {
+    position: relative; /* Posição relativa para os botões de navegação */
+    display: flex; /* Define um contêiner flexível */
+    overflow-x: auto; /* Adiciona um overflow horizontal com rolagem automática */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+    transform: translateX(0px); /* Posiciona inicialmente no ponto 0 */
+}
+
+.product-container img {
+    margin-right: 20px; /* Adiciona uma margem direita de 20px */
+    width: 300px; /* Define a largura das imagens dos produtos */
+    height: 400px; /* Define a altura das imagens dos produtos */
+}
+
+h2 {
+    color: #333; /* Define a cor do texto dos cabeçalhos h2 */
+    padding-left: 20px; /* Adiciona um preenchimento à esquerda de 20px */
+}
+
+.home-link {
+    font-size: 20px; /* Define o tamanho da fonte do link */
+    font-family: Arial, Helvetica, sans-serif; /* Define a fonte do link */
+}
+.product-container-type {
+    display: flex; /* Define um contêiner flexível */
+    overflow-x: auto; /* Adiciona um overflow horizontal com rolagem automática */
+    padding: 100px 0; /* Adiciona um preenchimento vertical de 20px */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+}
+
+.product-type {    
+    margin-right: 20px;
+    width: 140px; /* Define a largura da imagem */
+    height: 140px; /* Define a altura da imagem, igual à largura */
+    border-radius: 50%; /* Arredonda as bordas para formar um círculo */
+    object-fit: cover; /* Garante que a imagem preencha completamente o contêiner, mantendo sua proporção */
+    border-radius: 50%; /* Arredonda as bordas do contêiner para formar um círculo */
+}
+
+.titulo {
+    margin-left: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100; /* Defina o peso da fonte como "Thin" */
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+  
+
+.carousel {
+    margin-left: -950px;
+    display: flex; /* Define um contêiner flexível para as imagens */
+    scroll-snap-type: x mandatory; /* Garante que as imagens parem de rolar no próximo item */
+    scroll-behavior: smooth; /* Adiciona uma animação de rolagem suave */
+    max-width: 100%; /* Restringe a largura do carrossel a 100% do seu contêiner */
+}
+
+.carousel img {
+    scroll-snap-align: start; /* Define o ponto de alinhamento para cada imagem */
+    margin-right: 20px; /* Adiciona uma margem direita entre as imagens */
+    width: 300px; /* Define a largura das imagens dos produtos */
+    height: 400px; /* Define a altura das imagens dos produtos */
+    max-width: 100%; /* Restringe a largura do carrossel a 100% do seu contêiner */
+}
+
+.texto-foto{
+    margin-right: 20px;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+
+
+
