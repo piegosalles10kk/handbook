@@ -1,53 +1,53 @@
-body, html {
-    margin: 0; /* Remove a margem padrão */
-    padding: 0; /* Remove o preenchimento padrão */
-    font-family: Arial, sans-serif; /* Define a fonte padrão */
-    max-width: 100%; /* Restringe a largura do body a 100% da viewport */
-    margin: 0; /* Remove as margens padrão do body */
+.tudo {
+    max-width: 100vw; /* Define a largura máxima como 100% da largura da viewport */
+    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+    padding: 20px; /* Adiciona um preenchimento interno */
     box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+    overflow-x: hidden; /* Esconde o conteúdo que estiver além da largura da viewport */
+    flex: 1;
 }
 
-.navbar {
-    display: flex; /* Define um contêiner flexível */
-    justify-content: space-between; /* Distribui o espaço entre os elementos filhos, colocando-os nas extremidades */
-    align-items: center; /* Alinha os itens no centro verticalmente */
-    background-color: #ffffff; /* Define a cor de fundo da barra de navegação */
-    padding: 10px; /* Adiciona um preenchimento interno de 10px */
-    position: relative; /* Mantém a posição relativa para outros estilos */
+.header-mae{
+    display: absolute;
+    justify-content: center; /* Centraliza os itens horizontalmente apenas na segunda div */
+    max-width: 100vw; /* Define a largura máxima como 100% da largura da viewport */
+    
 }
 
-.search-section {
-    display: flex; /* Define um contêiner flexível */
-    align-items: center; /* Alinha os itens no centro verticalmente */
-}
-
-.search-section .home-link {
-    margin-right: 20px; /* Adiciona uma margem direita de 20px */
-    text-decoration: none; /* Remove a sublinhado dos links */
-    color: #373f3f; /* Define a cor do texto do link */
-}
-
-.logo-section {
+.header-menu{
+    flex: 1; /* Faz com que todas as divs tenham a mesma largura */
     display: flex;
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    align-items: center; /* Alinha os itens no centro verticalmente */
-    flex: 1; /* Permite que a seção ocupe o espaço disponível */
+    justify-content: space-between; /* Distribui os itens horizontalmente */
 }
 
-.logo-section img {
+.header-esquerda{
     display: flex;
-    align-items:flex-end;
+    justify-content: center; /* Centraliza os itens horizontalmente apenas na segunda div */
+    align-items: center; /* Centraliza os itens verticalmente apenas na segunda div */
+
+    
+}
+
+.header-centro{
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente apenas na segunda div */
+    align-items: center; /* Centraliza os itens verticalmente apenas na segunda div */
+
+}
+
+.logo-site{
+    align-items: center;
+    margin-left: auto;
+    display: flex;
+
     height: 80px; /* Define a altura do logo */
     max-width: 100%; /* Garante que o logo seja responsivo e não ultrapasse a largura do contêiner */
     width: auto; /* Mantém a proporção do logo */
+    
 }
 
-.user-section {
-    display: flex; /* Define um contêiner flexível */
-    align-items: center; /* Alinha os itens no centro verticalmente */
-}
 
-.user-section button {
+.header-direita button{
     background-color: #373f3f; /* Define a cor de fundo do botão */
     color: white; /* Define a cor do texto do botão */
     border: none; /* Remove a borda do botão */
@@ -55,82 +55,142 @@ body, html {
     cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o botão */
 }
 
-.user-section .icon-cart {
-    font-size: 24px; /* Define o tamanho da fonte do ícone do carrinho */
-    margin-left: 20px; /* Adiciona uma margem esquerda de 20px */
-    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o ícone */
-}
-
-.product-container {
+.categorias-mae{
     position: relative; /* Posição relativa para os botões de navegação */
     display: flex; /* Define um contêiner flexível */
     overflow-x: auto; /* Adiciona um overflow horizontal com rolagem automática */
     justify-content: center; /* Centraliza os itens horizontalmente */
     align-items: center; /* Alinha os itens no centro verticalmente */
-    transform: translateX(0px); /* Posiciona inicialmente no ponto 0 */
 }
 
-.product-container img {
-    margin-right: 20px; /* Adiciona uma margem direita de 20px */
-    width: 300px; /* Define a largura das imagens dos produtos */
-    height: 400px; /* Define a altura das imagens dos produtos */
-}
+.categorias-mae img{
+    margin-right: 60px;
+    max-width:100%; /* Define a largura máxima da imagem como 200px */
+    max-height: 100%; /* Define a altura máxima da imagem como 200px */
 
-h2 {
-    color: #333; /* Define a cor do texto dos cabeçalhos h2 */
-    padding-left: 20px; /* Adiciona um preenchimento à esquerda de 20px */
-}
-
-.home-link {
-    font-size: 20px; /* Define o tamanho da fonte do link */
-    font-family: Arial, Helvetica, sans-serif; /* Define a fonte do link */
-}
-.product-container-type {
-    display: flex; /* Define um contêiner flexível */
-    overflow-x: auto; /* Adiciona um overflow horizontal com rolagem automática */
-    padding: 100px 0; /* Adiciona um preenchimento vertical de 20px */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    align-items: center; /* Alinha os itens no centro verticalmente */
-}
-
-.product-type {    
+    overflow-x: hidden; /* Esconde o conteúdo que estiver além da largura da viewport */
     margin-right: 20px;
     width: 140px; /* Define a largura da imagem */
     height: 140px; /* Define a altura da imagem, igual à largura */
     border-radius: 50%; /* Arredonda as bordas para formar um círculo */
     object-fit: cover; /* Garante que a imagem preencha completamente o contêiner, mantendo sua proporção */
     border-radius: 50%; /* Arredonda as bordas do contêiner para formar um círculo */
+    
+}
+
+.categorias-mae a{
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Usa a cor do texto padrão do pai (nesse caso, a cor padrão do texto) */
+
+    text-align: center; /* Centraliza o texto */
+    font-size:20px;
+    margin-top: 100px; /* Adiciona uma margem inferior para abaixar as imagens */
+    font-family: 'Roboto', sans-serif;
+}
+
+.destaques-mae {
+    margin-top: -150px;
+    display: flex; /* Ativa o layout flexível */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    align-items: center; /* Centraliza os itens verticalmente */
+}
+
+
+.destaques-esquerda {
+    margin-top: -180px;
+    flex: 1; /* Faz a div ocupar 50% do espaço disponível */
+    padding: 20px; /* Adiciona um espaçamento interno */
+}
+
+.destaques-esquerda a{
+    color: #373f3f;/* Usa a cor do texto padrão do pai (nesse caso, a cor padrão do texto) */
+    font-family: 'Roboto', sans-serif;
+}
+
+.destaques-esquerda p{
+    color: #000000;/* Usa a cor do texto padrão do pai (nesse caso, a cor padrão do texto) */
+    font-family: 'Roboto', sans-serif;
+}
+
+.destaques-direita a{
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Usa a cor do texto padrão do pai (nesse caso, a cor padrão do texto) */
+
+    text-align: center; /* Centraliza o texto */
+    font-family: 'Roboto', sans-serif;
+}
+
+.destaques-direita {
+    margin-top: 200px;
+    flex: 1.1; /* Faz a div ocupar um pouco mais de espaço que a da esquerda */
+    padding: 20px; /* Adiciona um espaçamento interno */
+    display: flex; /* Ativa o layout flexível */
+    align-items: center; /* Centraliza os itens verticalmente */
+    overflow: hidden; /* Esconde as partes das imagens que estão fora do contêiner */
+}
+
+.carrossel {
+    display: flex; /* Dispor os itens em linha */
+    align-items: center; /* Centraliza os itens verticalmente */
+    animation: rolar 20s linear infinite; /* Aplicar animação contínua */
+}
+
+.carrossel a {
+    margin-right: 10px; /* Espaçamento entre as imagens */
+    min-width: 350px; /* Define uma largura mínima para as imagens dos produtos */
+    height: 500px; /* Define a altura das imagens dos produtos */
+}
+
+.destaques-direita img {
+    width: 100%; /* Garante que a imagem preencha completamente o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Animação para o carrossel */
+@keyframes rolar {
+    0% {
+        transform: translateX(0);
+    }
+    0% {
+        transform: translateX(-50%);
+    }
 }
 
 .titulo {
-    margin-left: 30px;
     font-family: 'Roboto', sans-serif;
     font-weight: 100; /* Defina o peso da fonte como "Thin" */
     font-size: 50px;
     margin-bottom: 30px;
 }
-  
 
-.carousel {
-    margin-left: -950px;
-    display: flex; /* Define um contêiner flexível para as imagens */
-    scroll-snap-type: x mandatory; /* Garante que as imagens parem de rolar no próximo item */
-    scroll-behavior: smooth; /* Adiciona uma animação de rolagem suave */
-    max-width: 100%; /* Restringe a largura do carrossel a 100% do seu contêiner */
+.lancamento-mae {
+    justify-content: center;
+    display: flex; /* Ativa o layout flexível */
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
 }
 
-.carousel img {
-    scroll-snap-align: start; /* Define o ponto de alinhamento para cada imagem */
-    margin-right: 20px; /* Adiciona uma margem direita entre as imagens */
-    width: 300px; /* Define a largura das imagens dos produtos */
-    height: 400px; /* Define a altura das imagens dos produtos */
-    max-width: 100%; /* Restringe a largura do carrossel a 100% do seu contêiner */
+.lancamento-fotos {
+    display: flex; /* Ativa o layout flexível */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content:center; /* Centraliza os itens horizontalmente */
 }
 
-.texto-foto{
-    margin-right: 20px;
+.lancamento-fotos img {
+    margin: 10px; /* Adiciona um espaçamento entre as imagens */
+    width: 280px; /* Define a largura das imagens */
+    height: 400px; /* Mantém a proporção da altura */
+}
+
+.lancamento-fotos a{
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.lancamento-fotos p{
+    display: flex; /* Ativa o layout flexível */
+    justify-content: center;
+    color: #373f3f;/* Usa a cor do texto padrão do pai (nesse caso, a cor padrão do texto) */
     font-family: 'Roboto', sans-serif;
-    
 }
 
 
