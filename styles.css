@@ -47,31 +47,35 @@
 }
 
 
-.header-direita button{
+.header-direita button {
     background-color: #373f3f; /* Define a cor de fundo do botão */
     color: white; /* Define a cor do texto do botão */
     border: none; /* Remove a borda do botão */
     padding: 10px 20px; /* Define o preenchimento interno do botão */
     cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o botão */
+    width: 90px; /* Define a largura do botão */
+    height: 40px; /* Define a altura do botão */
 }
 
 .categorias-mae{
+
+    overflow: hidden; /* Esconde as partes das imagens que estão fora do contêiner */
     position: relative; /* Posição relativa para os botões de navegação */
     display: flex; /* Define um contêiner flexível */
     overflow-x: auto; /* Adiciona um overflow horizontal com rolagem automática */
     justify-content: center; /* Centraliza os itens horizontalmente */
     align-items: center; /* Alinha os itens no centro verticalmente */
+    
 }
 
-.categorias-mae img{
-    margin-right: 60px;
+.categorias-mae img{ 
     max-width:100%; /* Define a largura máxima da imagem como 200px */
     max-height: 100%; /* Define a altura máxima da imagem como 200px */
 
     overflow-x: hidden; /* Esconde o conteúdo que estiver além da largura da viewport */
     margin-right: 20px;
-    width: 140px; /* Define a largura da imagem */
-    height: 140px; /* Define a altura da imagem, igual à largura */
+    width: 120px; /* Define a largura da imagem */
+    height: 120px; /* Define a altura da imagem, igual à largura */
     border-radius: 50%; /* Arredonda as bordas para formar um círculo */
     object-fit: cover; /* Garante que a imagem preencha completamente o contêiner, mantendo sua proporção */
     border-radius: 50%; /* Arredonda as bordas do contêiner para formar um círculo */
@@ -89,80 +93,108 @@
 }
 
 .destaques-mae {
-    margin-top: -150px;
-    display: flex; /* Ativa o layout flexível */
-    justify-content: space-between; /* Distribui o espaço entre os itens */
-    align-items: center; /* Centraliza os itens verticalmente */
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
-}
-
-
-.destaques-esquerda {
+  }
+  
+  .destaques-esquerda {
     margin-top: -180px;
-    flex: 1; /* Faz a div ocupar 50% do espaço disponível */
-    padding: 20px; /* Adiciona um espaçamento interno */
-}
-
-.destaques-esquerda a{
-    color: #373f3f;/* Usa a cor do texto padrão do pai (nesse caso, a cor padrão do texto) */
+    flex: 0.5; /* Garante que a div ocupe espaço disponível */
+    padding: 20px;
+  }
+  
+  .destaques-esquerda a {
+    color: #373f3f;
     font-family: 'Roboto', sans-serif;
-}
-
-.destaques-esquerda p{
-    color: #000000;/* Usa a cor do texto padrão do pai (nesse caso, a cor padrão do texto) */
+  }
+  
+  .destaques-esquerda p {
+    color: #000000;
     font-family: 'Roboto', sans-serif;
-}
-
-.destaques-direita a{
-    text-decoration: none; /* Remove o sublinhado */
-    color: inherit; /* Usa a cor do texto padrão do pai (nesse caso, a cor padrão do texto) */
-
-    text-align: center; /* Centraliza o texto */
+  }
+  
+  .destaques-direita a {
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
     font-family: 'Roboto', sans-serif;
-}
-
-.destaques-direita {
+  }
+  
+  .destaques-direita {
     margin-top: 200px;
-    flex: 1.1; /* Faz a div ocupar um pouco mais de espaço que a da esquerda */
-    padding: 20px; /* Adiciona um espaçamento interno */
-    display: flex; /* Ativa o layout flexível */
-    align-items: center; /* Centraliza os itens verticalmente */
-    overflow: hidden; /* Esconde as partes das imagens que estão fora do contêiner */
-}
-
-.carrossel {
-    display: flex; /* Dispor os itens em linha */
-    align-items: center; /* Centraliza os itens verticalmente */
-    animation: rolar 20s linear infinite; /* Aplicar animação contínua */
-}
-
-.carrossel a {
-    margin-right: 10px; /* Espaçamento entre as imagens */
-    min-width: 350px; /* Define uma largura mínima para as imagens dos produtos */
-    height: 500px; /* Define a altura das imagens dos produtos */
-}
-
-.destaques-direita img {
-    width: 100%; /* Garante que a imagem preencha completamente o contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-}
-
-/* Animação para o carrossel */
-@keyframes rolar {
+    flex: 1; /* Garante que a div ocupe espaço disponível */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .carrossel {
+    display: flex;
+    align-items: center;
+    animation: rolar 60s linear infinite;
+  }
+  
+  .carrossel a {
+    margin-right: 10px;
+    min-width: 350px;
+    height: 500px;
+  }
+  
+  .destaques-direita img {
+    width: 100%;
+    height: auto;
+  }
+  
+  @keyframes rolar {
     0% {
-        transform: translateX(0);
+      transform: translateX(0);
     }
-    0% {
-        transform: translateX(-50%);
+    100% {
+      transform: translateX(-100%);
     }
-}
-
-.titulo {
+  }
+  
+  .titulo {
     font-family: 'Roboto', sans-serif;
-    font-weight: 100; /* Defina o peso da fonte como "Thin" */
+    font-weight: 100;
     font-size: 50px;
     margin-bottom: 30px;
-}
+  }
+  
+  /* Media Query para telas menores */
+  @media (max-width: 768px) {
+    .destaques-mae {
+      flex-direction: column; /* Organiza os itens em coluna */
+    }
+  
+    .destaques-esquerda,
+    .destaques-direita {
+      order: unset; /* Reseta qualquer ordem específica */
+      margin: 0 20px;
+      flex: 1; /* Garante que cada div ocupe o espaço disponível */
+      width: calc(100% - 40px); /* Garante que ocupem 100% da largura do contêiner com margens */
+    }
+  
+    .destaques-direita {
+      margin-top: 20px; /* Ajusta a margem superior */
+      overflow: visible; /* Garante que o seu conteúdo não seja cortado */
+    }
+
+  
+    .carrossel a {
+        min-width: 200px; /* Define um tamanho mínimo para a imagem */
+        width: 100%;
+      }
+  
+    .carrossel {
+      width: 100%;
+      justify-content: center;
+    }
+  }
 
 .lancamento-mae {
     justify-content: center;
