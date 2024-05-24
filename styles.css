@@ -93,6 +93,7 @@
     display: flex; /* Ativa o layout flexível */
     justify-content: space-between; /* Distribui o espaço entre os itens */
     align-items: center; /* Centraliza os itens verticalmente */
+    flex-wrap: wrap;
 }
 
 
