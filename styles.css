@@ -135,7 +135,7 @@
   .carrossel {
     display: flex;
     align-items: center;
-    animation: rolar 60s linear infinite;
+    animation: rolar 40s linear infinite;
   }
   
   .carrossel a {
@@ -227,4 +227,42 @@
 }
 
 
+/* CSS para o menu lateral */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Esconde o menu lateral */
+    width: 250px;
+    height: 100%;
+    background: #333;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
 
+.side-menu.active {
+    left: 0; /* Exibe o menu lateral */
+}
+
+/* CSS para o botão de menu */
+.menu-btn {
+    display: none; /* Esconde o botão de menu por padrão */
+    /* Outros estilos... */
+}
+
+/* Media query para telas menores */
+@media screen and (max-width: 768px) {
+    .menu-btn {
+        display: block; /* Exibe o botão de menu em telas menores */
+    }
+
+    /* Esconde os botões da header quando o menu lateral está ativo */
+    .side-menu.active + .tudo header .header-direita {
+        display: none;
+    }
+
+    /* Exibe os botões no menu lateral */
+    .side-menu.active .login-button,
+    .side-menu.active .register-button {
+        display: block;
+    }
+}
